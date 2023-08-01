@@ -9,7 +9,7 @@ export class UserController {
   constructor(private readonly userService:UserService) {}
 
   @Get('profile')
-  @Auth("admin")
+  @Auth()
   async getProfile(){
     return this.userService.byId()
   }
